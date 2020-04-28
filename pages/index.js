@@ -23,15 +23,12 @@ export default function Home({ joke }) {
     set_liked_joke(joke);
   };
 
-  console.log(likes);
-
   return (
     <div className="container">
       <h1>Chuck Norris Joke of the day.</h1>
       <p>{joke}</p>
       <br />
       <a href="/">random joke</a>
-      <br></br>
       <button onClick={() => handleLike(joke)}>like</button>
       <h2>liked jokes</h2>
       <ul>
@@ -57,10 +54,14 @@ export default function Home({ joke }) {
           color: #333;
           text-decoration: none;
           background: #eee;
+          display: inline-block;
         }
         a:hover {
           text-decoration: underline;
           background: #f5f5f5;
+        }
+        button {
+          margin-top: 5px;
         }
       `}</style>
     </div>
